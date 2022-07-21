@@ -39,7 +39,7 @@ const adornmentBase = `
     top: 50%;
     transform: translateY(-40%);
     svg {
-        font-size: ${sizes.display};
+        font-size: ${sizes.medium};
         color: ${colors.darkestGray};
     }
 `;
