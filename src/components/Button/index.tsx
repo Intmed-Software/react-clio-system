@@ -1,7 +1,7 @@
 import React from "react";
 import { CircularProgress } from "../CircularProgress";
 import { Typography } from "../Typography";
-import { ContainedButton, Outlined, TextButton } from "./styles";
+import { ButtonContent, ElementButton, LoadingContainer } from "./styles";
 import { ButtonProps } from "./types";
 
 export function Button({
@@ -9,34 +9,34 @@ export function Button({
   size = "medium",
   variant = "contained",
   loading,
+  loandingWithContainer,
   ...rest
 }: ButtonProps) {
-  function Content() {
-    return loading ? (
-      <CircularProgress size={15} />
-    ) : (
-      <Typography weight="bold">{label}</Typography>
-    );
+  const buttonProperties = {
+    ...rest,
+    ...{
+      size,
+      variant,
+    },
+  };
+
+  function LoadingVisibility() {
+    return loading ? <CircularProgress size={15} /> : <></>;
   }
 
-  switch (variant) {
-    case "contained":
-      return (
-        <ContainedButton {...rest}>
-          <Content />
-        </ContainedButton>
-      );
-    case "text":
-      return (
-        <TextButton {...rest}>
-          <Content />
-        </TextButton>
-      );
-    case "outlined":
-      return (
-        <Outlined {...rest}>
-          <Content />
-        </Outlined>
-      );
+  function LoadinWithContentVisibility() {
+    return loandingWithContainer ? <CircularProgress size={15} /> : <></>;
   }
+
+  return (
+    <ElementButton {...buttonProperties}>
+      <LoadingContainer>
+        <LoadingVisibility />
+      </LoadingContainer>
+      <ButtonContent loading={loading}>
+        <LoadinWithContentVisibility />
+        <Typography weight="bold">{label}</Typography>
+      </ButtonContent>
+    </ElementButton>
+  );
 }
