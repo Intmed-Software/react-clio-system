@@ -8,6 +8,7 @@ export * from "./src/components/CircularProgress";
 export * from "./src/components/Drawer";
 export * from "./src/components/Icons";
 export * from "./src/components/Label";
+export * from "./src/components/TextArea";
 export * from "./src/components/TextField";
 export * from "./src/components/Toolbar";
 export * from "./src/components/Typography";
