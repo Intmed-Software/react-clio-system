@@ -7,8 +7,8 @@ export const parameters = {
     },
   },
   layout: "centered",
-  previewTabs: {
-    canvas: { hidden: true },
-  },
+  // previewTabs: {
+  //   canvas: { hidden: true },
+  // },
   viewMode: "docs",
 };
