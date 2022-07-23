@@ -1,12 +1,19 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Alert } from "../../components/Alets";
-
+import { apiDescription } from "./utils/ApiDescription";
 export default {
   title: "components/Alerts",
   component: Alert,
   argTypes: {
     backgroundColor: { control: "color" },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: apiDescription(["Alert"]),
+      },
+    },
   },
 } as ComponentMeta<typeof Alert>;
 
@@ -28,7 +35,6 @@ Error.args = {
   ...base,
   ...{ variant: "error" },
 };
-
 
 export const Warning = Template.bind({});
 

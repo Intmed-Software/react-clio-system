@@ -9,10 +9,10 @@ import { AlertProps } from "./types";
 const iconOptions = {
   success: <FaCheckCircle />,
   error: <MdErrorOutline />,
-  warning: <AiOutlineWarning/>,
-  info: <FaInfoCircle/>,
-  dark: <FaInfoCircle/>,
-  light: <FaInfoCircle/>,
+  warning: <AiOutlineWarning />,
+  info: <FaInfoCircle />,
+  dark: <FaInfoCircle />,
+  light: <FaInfoCircle />,
 };
 
 export function Alert(props: AlertProps) {
@@ -21,11 +21,12 @@ export function Alert(props: AlertProps) {
       <AlertContainer>
         {iconOptions[props.variant]}
         <Typography>{props.message}</Typography>
-        <CloseIcon {...props}>
-          <AiOutlineClose/>
-        </CloseIcon>
+        {props.onclose ? (
+          <CloseIcon {...props} onClick={props.onclose}>
+            <AiOutlineClose />
+          </CloseIcon>
+        ) : null}
       </AlertContainer>
     </BaseAlert>
   );
 }
-
