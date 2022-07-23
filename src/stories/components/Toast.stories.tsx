@@ -7,7 +7,7 @@ import { FlexContainer } from "./utils/FlexContainer";
 
 const exemples = ["success", "error", "warning", "info", "light", "dark"];
 export default {
-  title: "components/Toast",
+  title: "components",
   component: FlexContainer,
   argTypes: {
     backgroundColor: { control: "color" },
@@ -34,7 +34,7 @@ function ExempleComponent() {
         <Button
           key={key}
           label={`Show my ${item}  Toast`}
-          variant="text"
+          variant="outlined"
           onClick={() => {
             toast[item]({
               message: `Hello, i'm a ${item} toast`,
@@ -55,6 +55,6 @@ const Template: ComponentStory<typeof FlexContainer> = (args) => (
   </FlexContainer>
 );
 
-export const Main = Template.bind({});
+export const Toast = Template.bind({});
 
-Main.args = {};
+Toast.args = {};
