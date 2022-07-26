@@ -1,43 +1,61 @@
-import styled from 'styled-components';
-import colors from '../../patters/colors';
+import styled from "styled-components";
+import colors from "../../patters/colors";
 import { ButtonProps } from "./types";
 
+const backGround = {
+  outlined: colors.transparent,
+  text: colors.transparent,
+  contained: colors.mainBlue,
+};
+
+const textColor = {
+  outlined: colors.mainBlue,
+  text: colors.mainBlue,
+  contained: colors.white,
+};
+
+const borderColor = {
+  outlined: colors.mainBlue,
+  text: colors.transparent,
+  contained: colors.mainBlue,
+};
+
 export const ElementButton = styled.button<ButtonProps>`
-    width:${props => props.fullwidth ? '100%' : 'auto'};
-    border-radius: 4px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.469rem 1rem; // 7.5px  16px 
-    outline: none;
-    position: relative;
-    cursor: pointer;
-    
-    :disabled {
-        opacity: 0.4;
-    }
+  width: ${(props) => (props.fullwidth ? "100%" : "auto")};
+  background-color: ${(props) => backGround[props.variant]};
+  color: ${(props) => textColor[props.variant]};
+  border: 1px solid ${(props) => borderColor[props.variant]};
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.469rem 1rem; // 7.5px  16px
+  outline: none;
+  position: relative;
+  cursor: pointer;
 
-    :hover {
-       background-color: ${colors.accentBlue};
-       transition: 0.3s;
-       color: ${colors.mainBlue};
-    }
+  :disabled {
+    opacity: 0.4;
+  }
+
+  :hover {
+    background-color: ${colors.accentBlue};
+    transition: 0.3s;
+    color: ${colors.mainBlue};
+  }
 `;
 
-export const ContainedButton = styled(ElementButton)`
-    background-color: ${colors.mainBlue};
-    color: ${colors.white};
+export const LoadingContainer = styled.div`
+  position: absolute;
+  left: calc(50% - 7.5px);
+  top: calc(50% - 7.5px);
+  width: 100%;
+  height: 100%;
 `;
 
-export const TextButton = styled(ElementButton)`
-    background-color: transparent;
-    border:none;
-    color: ${colors.mainBlue};
-`
-
-export const Outlined = styled(ElementButton)`
-    background-color: transparent;
-    border: 1px solid ${colors.mainBlue};
-    color: ${colors.mainBlue};
-`
+export const ButtonContent = styled.span<ButtonProps>((props) => ({
+  visibility: props.loading ? "hidden" : "visible",
+  opacity: props.loading ? 0 : 1,
+  display: "flex",
+  columnGap: "8px"
+}));
