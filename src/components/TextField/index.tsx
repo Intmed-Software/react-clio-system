@@ -1,4 +1,5 @@
-export * from "./BaseTextField";
-export * from "./PasswordField";
-export * from "./SearchField";
-export * from "./types_d";
+export { TextField } from "./BaseTextField";
+export { PasswordField } from "./PasswordField";
+export { SearchField } from "./SearchField";
+export { TextFieldProps } from "./types_d";
+

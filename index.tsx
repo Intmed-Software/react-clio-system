@@ -2,18 +2,22 @@ import colors from "./src/patters/colors";
 import sizes from "./src/patters/sizes";
 import weights from "./src/patters/weights";
 
-export * from "./src/components/Button";
-export * from "./src/components/Chips";
-export * from "./src/components/CircularProgress";
-export * from "./src/components/Dialog";
+export { ChipsProps } from "././src/components/Chips/types";
+export { Button } from "./src/components/Button";
+export { ButtonProps } from "./src/components/Button/types";
+export { Chips } from "./src/components/Chips";
+export { CircularProgress } from "./src/components/CircularProgress";
+export { Dialog } from "./src/components/Dialog";
+export { DialogProps } from "./src/components/Dialog/types";
 export * from "./src/components/Drawer";
 export * from "./src/components/Icons";
 export * from "./src/components/Label";
-export * from "./src/components/TextArea";
+export { TextArea } from "./src/components/TextArea";
+export { TextAreaProps } from "./src/components/TextArea/types";
 export * from "./src/components/TextField";
-export * from "./src/components/Toolbar";
-export * from "./src/components/Typography";
-export * from "./src/components/Radio";
+export { Toolbar } from "./src/components/Toolbar";
+export { ToolbarProps } from "./src/components/Toolbar/types";
+export { Typography } from "./src/components/Typography";
+export { TypographyProps } from "./src/components/Typography/types";
 
-export { colors, sizes, weights };
-
+export const ClioPatterns = { colors, sizes, weights };
