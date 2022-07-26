@@ -7,7 +7,7 @@ export function Toast(props: ToastProps) {
   const { close } = useToast();
   return (
     <ToastContainer {...props}>
-      <Alert {...props} onclose={props.showCloseButon ? () => close() : null} />
+      <Alert {...props} onClose={props.showCloseButon ? () => close() : null} />
     </ToastContainer>
   );
 }

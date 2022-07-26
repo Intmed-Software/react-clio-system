@@ -21,8 +21,8 @@ export function Alert(props: AlertProps) {
       <AlertContainer>
         {iconOptions[props.variant]}
         <Typography>{props.message}</Typography>
-        {props.onclose ? (
-          <CloseIcon {...props} onClick={props.onclose}>
+        {props.onClose ? (
+          <CloseIcon {...props} onClick={props.onClose}>
             <AiOutlineClose />
           </CloseIcon>
         ) : null}
