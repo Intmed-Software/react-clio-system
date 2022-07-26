@@ -34,7 +34,7 @@ export default {
   errorLight: "#F8D2D2",
 
   /* Neutral Colors */
-  white: "#ffffff",
+  white: "#fafafa",
   background: "#EEF0F1",
   primary: "#666E75",
   black: "#666E75",

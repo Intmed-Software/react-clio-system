@@ -8,12 +8,6 @@ const backGround = {
   contained: colors.mainBlue,
 };
 
-const textColor = {
-  outlined: colors.mainBlue,
-  text: colors.mainBlue,
-  contained: colors.white,
-};
-
 const borderColor = {
   outlined: colors.mainBlue,
   text: colors.transparent,
@@ -23,7 +17,6 @@ const borderColor = {
 export const ElementButton = styled.button<ButtonProps>`
   width: ${(props) => (props.fullwidth ? "100%" : "auto")};
   background-color: ${(props) => backGround[props.variant]};
-  color: ${(props) => textColor[props.variant]};
   border: 1px solid ${(props) => borderColor[props.variant]};
   border-radius: 4px;
   display: flex;
@@ -57,5 +50,5 @@ export const ButtonContent = styled.span<ButtonProps>((props) => ({
   visibility: props.loading ? "hidden" : "visible",
   opacity: props.loading ? 0 : 1,
   display: "flex",
-  columnGap: "8px"
+  columnGap: "8px",
 }));

@@ -28,6 +28,10 @@ export function Button({
     return loandingWithContainer ? <CircularProgress size={15} /> : <></>;
   }
 
+  function foo(): "mainBlue" | "white" {
+    if (variant === "outlined" || variant === "text") return "mainBlue";
+    return "white";
+  }
   return (
     <ElementButton {...buttonProperties}>
       <LoadingContainer>
@@ -35,7 +39,9 @@ export function Button({
       </LoadingContainer>
       <ButtonContent loading={loading}>
         <LoadinWithContentVisibility />
-        <Typography weight="bold">{label}</Typography>
+        <Typography weight="bold" color={foo()}>
+          {label}
+        </Typography>
       </ButtonContent>
     </ElementButton>
   );
