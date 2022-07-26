@@ -1,5 +1,7 @@
-<p align="center"><img src="https://raw.githubusercontent.com/FormidableLabs/spectacle/main/docs/src/assets/logo_spectacle.png" width=250></p>
-<h2 align="center">Spectacle</h2>
+<p align="center">
+<img src="/docs/wallpaper.png" width=250>
+</p>
+<h2 align="center">Clio System</h2>
 <p align="center">
 <strong>✨ A ReactJS based UI Library ✨</strong>
 <br><br>
@@ -11,22 +13,18 @@
 </a>
 </p>
 
-### Dependencias adicionas
+### Aditional dependencies
 
-Nossa biblioteca conta com dependências adicionais. Esteja ciente:
+Our library has additional dependencies. Be aware:
 
 - "react-icons": "^4.3.1",
 - "styled-components": "^5.3.5",
 - "styled-theming": "^2.2.0"
 
-### Instalação do projeto
+### Instalation
 
-`npm install react-clio-system` ou `yarn add react-clio-system`
+`npm install react-clio-system` or `yarn add react-clio-system`
 
-### Ver documentação localmente
-
-na raiz do projeto, rode:
-`npm storybook` ou `yarn storybook`
 
 ### Utils
 
