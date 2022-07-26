@@ -1,3 +1,4 @@
+import React from "react";
 const defaultHighlight = (s) => <em>{s}</em>;
 // Needed if the target includes ambiguous characters that are valid regex operators.
 const escapeRegex = (v) => v.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
