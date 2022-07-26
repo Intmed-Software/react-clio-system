@@ -28,4 +28,4 @@ Our library has additional dependencies. Be aware:
 
 ### Utils
 
-[Clio library](https://www.figma.com/file/e7FDuNOCfxju0hI2n1QOTm/Design-System-Clio---Documenta%C3%A7%C3%A3o?node-id=32%3A539 "Clio library")
+[Clio library on Figma](https://www.figma.com/file/e7FDuNOCfxju0hI2n1QOTm/Design-System-Clio---Documenta%C3%A7%C3%A3o?node-id=32%3A539 "Clio library")
