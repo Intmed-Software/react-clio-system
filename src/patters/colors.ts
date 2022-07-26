@@ -7,7 +7,7 @@ export default {
   accentBlue: "#E8F2FC",
   focusBlue: "#2B96E9",
   lightBlue: "#D3E6FB",
-
+  lighterBlue: "#D1E4FA",
   /* Group gray */
   darkestGray: "#4D5B6A",
   darkGray: "#768393",
