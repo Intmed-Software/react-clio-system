@@ -33,9 +33,9 @@ export function Autocomplete({
   });
 
   const handleSelectRow = (row) => {
-    onSelect(row)
-    setSearch(displayFunction(row));
     setDisplay(false);
+    setSearch(displayFunction(row));
+    onSelect(row)
   };
 
   function localDisplayOption(option: any): any {
