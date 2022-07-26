@@ -2,6 +2,7 @@ import colors from "./src/patters/colors";
 import sizes from "./src/patters/sizes";
 import weights from "./src/patters/weights";
 
+export * from "./src/components/Accordion";
 export * from "./src/components/Button";
 export * from "./src/components/Chips";
 export * from "./src/components/CircularProgress";
