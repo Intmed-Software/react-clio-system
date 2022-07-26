@@ -1,6 +1,6 @@
 {
-  "name": "react-clio-system-bismarck",
-  "version": "1.0.4",
+  "name": "react-clio-system",
+  "version": "1.0.0",
   "author": "intmed softwares",
   "main": "dist/index.js",
   "license": "MIT",
