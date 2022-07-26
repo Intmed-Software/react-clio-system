@@ -1,0 +1,26 @@
+<!-- MyComponent.stories.mdx -->
+
+import {
+  Drawer,
+  DrawerListMenu,
+  DrawnerContainer
+} from "../../components/Drawer";
+import { FlexContainer } from "../utils/FlexContainer";
+import { Canvas, Meta } from '@storybook/addon-docs';
+
+export const Template = (args) => (<FlexContainer {...args } />);
+
+<Meta title="SampleComponent" component={ FlexContainer } />
+<Canvas columns={2}  withSource="open" withToolbar>
+  <FlexContainer {...args}>
+    <Drawer open>
+      <DrawerListMenu text="Home" icon={<FaHome />} active={true} />
+      <DrawerListMenu
+        text="time do coffee"
+        icon={<FaCoffee />}
+        active={false}
+      />
+    </Drawer>
+    <DrawnerContainer>Meu container</DrawnerContainer>
+  </FlexContainer>
+</Canvas>
