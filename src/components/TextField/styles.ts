@@ -1,28 +1,19 @@
 import styled from "styled-components";
 import colors from "../../patters/colors";
 import sizes from "../../patters/sizes";
+import { FieldBases } from "../../styles/mixins";
 import { TextFieldBaseProps } from "./types_d";
-
 export interface InputBaseProps extends TextFieldBaseProps {
   extraSpacesStart: boolean;
   extraSpacesEnd: boolean;
 }
 
+
 export const InputBase = styled.input<InputBaseProps>`
-  border: 1px solid
-    ${(props) => (props.error ? colors.mediumError : colors.mediumGray)};
   padding: 8px;
   padding-left: ${(props) => (props.extraSpacesStart ? 35 : 8)}px;
   padding-right: ${(props) => (props.extraSpacesEnd ? 35 : 8)}px;
-  width: 100%;
-  background: ${colors.white};
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: ${colors.darkestGray};
-  :disabled {
-    background: ${colors.ice};
-    color: ${colors.background};
-  }
+  ${(props) => FieldBases({ error: props.error })}
 `;
 
 export const ErrorHelperContet = styled.div({
@@ -39,7 +30,7 @@ const adornmentBase = `
     top: 50%;
     transform: translateY(-40%);
     svg {
-        font-size: ${sizes.display};
+        font-size: ${sizes.medium};
         color: ${colors.darkestGray};
     }
 `;

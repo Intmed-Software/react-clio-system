@@ -6,6 +6,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  layout: 'centered',
-
-}
+  layout: "centered",
+  // previewTabs: {
+  //   canvas: { hidden: true },
+  // },
+  viewMode: "docs",
+};
