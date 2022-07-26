@@ -1,4 +1,7 @@
 export default {
+  /* Group black */
+  mediumblack: "#27323F",
+
   /* Group blue */
 
   mainBlue: "#034DA4",
