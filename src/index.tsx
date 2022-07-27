@@ -2,6 +2,8 @@ import colors from "./patters/colors";
 import sizes from "./patters/sizes";
 import weights from "./patters/weights";
 
+export { Avatar } from "./components/Avatar";
+export { AvatarProps } from "./components/Avatar/types";
 export { Button } from "./components/Button";
 export { ButtonProps } from "./components/Button/types";
 export { Chips } from "./components/Chips";
@@ -19,5 +21,4 @@ export { Toolbar } from "./components/Toolbar";
 export { ToolbarProps } from "./components/Toolbar/types";
 export { Typography } from "./components/Typography";
 export { TypographyProps } from "./components/Typography/types";
-
 export const ClioPatterns = { colors, sizes, weights };
