@@ -14,6 +14,6 @@ export * from "./src/components/TextField";
 export * from "./src/components/Toolbar";
 export * from "./src/components/Typography";
 export * from "./src/components/Radio";
+export * from "./src/components/Tag";
 
 export { colors, sizes, weights };
-
