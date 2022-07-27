@@ -11,15 +11,11 @@
 
 Our library has additional dependencies. Be aware:
 
-- "react-icons": "^4.3.1",
-- "styled-components": "^5.3.5",
-- "styled-theming": "^2.2.0"
-
 ### Instalation
 
-`npm install react-clio-system` or `yarn add react-clio-system`
+`npm install react-clio-system`
 
+### Some aditional packages are required
 
-### Utils
+`npm install react-icons  styled-components  styled-theming`
 
-[Clio library on Figma](https://www.figma.com/file/e7FDuNOCfxju0hI2n1QOTm/Design-System-Clio---Documenta%C3%A7%C3%A3o?node-id=32%3A539 "Clio library")

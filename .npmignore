@@ -1,7 +1,9 @@
 node_modules
 src
 tsconfig.json
-
+.storybook
 .github
 __tests__
 yarn-error.log
+yarn.lock
+docs
