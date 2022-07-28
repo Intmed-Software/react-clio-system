@@ -30,7 +30,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --preview-url=/storybook/index.html",
+    "build-storybook": "build-storybook --preview-url=/react-clio-system-storybook/index.html",
     "build": "tsc -p ."
   }
 }
