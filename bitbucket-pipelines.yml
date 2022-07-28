@@ -1,0 +1,24 @@
+definitions:
+  steps:
+    - step: &webCommonStep
+        name: Build and Test
+        image: node:14.18
+        caches:
+          - node
+        script:
+          - npm install
+          - npm run build-storybook
+        artifacts:
+          - storybook-static/**
+
+    - step: &deployCommonStep
+        name: Deploy
+        script:
+        - ssh ubuntu@18.228.144.220 'rm -rf /home/ubuntu/dockerizing/nginx-angular/app/react-clio-system-storybook/*'
+        - scp -r storybook-static/* ubuntu@18.228.144.220:/home/ubuntu/dockerizing/nginx-angular/app/react-clio-system-storybook
+
+pipelines:
+  branches:
+    develop:
+      - step: *webCommonStep
+      - step: *deployCommonStep
