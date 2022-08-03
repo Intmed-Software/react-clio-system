@@ -8,6 +8,7 @@ export default {
   focusBlue: "#2B96E9",
   lightBlue: "#D3E6FB",
   lighterBlue: "#D1E4FA",
+  lightestBlue: "#EEF4FB",
   /* Group gray */
   darkestGray: "#4D5B6A",
   darkGray: "#768393",
