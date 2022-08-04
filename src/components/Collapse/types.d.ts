@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 export interface CollapseProps {
-    label?: string;
-    mark?: any;
+    title?: string;
+    mark?: ReactNode;
     children?: ReactNode;
 }
