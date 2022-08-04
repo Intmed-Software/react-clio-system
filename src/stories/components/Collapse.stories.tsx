@@ -1,10 +1,11 @@
-import { storiesOf } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Collapse } from "../../components/Collapse";
 import { Typography } from "../../components/Typography";
 import { Chips } from '../../components/Chips/index';
+import { TextArea } from "../../components/TextArea";
 
-function ExempleContainer() {
+function ExempleText() {
     return (
         <>
             <Typography size="display"> What is Lorem Ipsum?</Typography>
@@ -23,28 +24,30 @@ function ExempleContainer() {
     );
 }
 
-function teste() {
-    return (
-        <>
-            <span>aaaaaaaaaaaaaa</span>
-        </>
-    )
-}
+export default {
+    title: "components/Collapse",
+    component: Collapse,
 
-storiesOf("Collapse", module).add("Defalt Collapse", () => {
-    return (
-        <div style={{width: '480px'}}>
-            <Collapse title="Defalt Collapse">
-                <ExempleContainer />
-            </Collapse>
-        </div>
-    );
-}).add("Mark Collapse", () => {
-    return (
-        <div style={{width: '480px'}}>
-            <Collapse title="Mark Collapse" mark={<Chips label="mark" />}>
-                <ExempleContainer />
-            </Collapse>
-        </div>
-    );
-})
+} as ComponentMeta<typeof Collapse>;
+
+
+const Template: ComponentStory<typeof Collapse> = (args) => (
+    <div style={{ width: "480px" }}>
+        <Collapse {...args} />
+    </div>
+);
+
+export const CollapseDefault = Template.bind({});
+
+CollapseDefault.args = {
+    title: "Collapse title",
+    children: <ExempleText />,
+};
+
+export const CollapseMark = Template.bind({});
+
+CollapseMark.args = {
+    title: "Collapse title",
+    children: <TextArea /> ,
+    mark: <Chips label="mark" />
+};
