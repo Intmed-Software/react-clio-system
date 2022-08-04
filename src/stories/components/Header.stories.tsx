@@ -1,17 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { Header } from '../../components/Toolbar';
+import { Toolbar } from '../../components/Toolbar';
 import { IconButtonDarkThemeExample, IconButtonLightThemeExample, LogoDarkThemeExample, LogoLightThemeExample } from '../utils/icons';
 
 export default {
   title: 'components/Header',
-  component: Header,
+  component: Toolbar,
   parameters: {
     layout: 'fullscreen'
   }
-} as ComponentMeta<typeof Header>;
+} as ComponentMeta<typeof Toolbar>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof Toolbar> = (args) => <Toolbar {...args} />;
 
 export const DarkTheme = Template.bind({});
 
