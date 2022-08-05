@@ -32,7 +32,7 @@ export const ElementButton = styled.button<ButtonProps>`
   }
 
   :hover {
-    background-color: ${colors.accentBlue};
+    background-color: ${colors.lightestBlue};
     transition: 0.3s;
     color: ${colors.mainBlue};
   }
