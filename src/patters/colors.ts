@@ -40,11 +40,6 @@ export default {
 
   /* Neutral Colors */
   white: "#fafafa",
-  background: "#EEF0F1",
-  primary: "#666E75",
   black: "#27323F",
-  secondary: "#999EA3",
-  ice: "#F9F9F9",
-  mainOrange: "#F5821F",
   transparent: "#ffffff00",
 };

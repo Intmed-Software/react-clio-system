@@ -32,20 +32,20 @@ export const DrawnerStyled = styled.div`
 export const DrawerListMenuActiveTag = styled.div<{active: boolean}>`
   width: 5px;
   min-height: 40px;
-  background-color: ${colors.mainOrange};
+  background-color: ${colors.orangeBrand};
   border-radius: 0px 4px 4px 0px;
   visibility: ${props => props.active ? "": "hidden"};
 `
 
 export const DrawerListItemIcon = styled.div<{active: boolean}>`
   svg {
-    color: ${props => props.active ? colors.mainOrange: colors.darkestGray};
+    color: ${props => props.active ? colors.orangeBrand: colors.darkestGray};
     font-size: 20px
   }
 `
 
 export const DrawerListItemText = styled.div<{active: boolean}>`
-  color: ${props => props.active ? colors.mainOrange: colors.darkestGray};
+  color: ${props => props.active ? colors.orangeBrand: colors.darkestGray};
 `
 
 export const DrawerListContainer = styled.div`
