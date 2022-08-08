@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { CircularProgress } from "../CircularProgress";
 import { Typography } from "../Typography";
 import { ButtonContent, ElementButton, LoadingContainer } from "./styles";
@@ -10,8 +10,9 @@ export function Button({
   variant = "contained",
   loading,
   loandingWithContainer,
+  children,
   ...rest
-}: ButtonProps) {
+}: PropsWithChildren<ButtonProps>) {
   const buttonProperties = {
     ...rest,
     ...{
@@ -40,7 +41,7 @@ export function Button({
       <ButtonContent loading={loading}>
         <LoadinWithContentVisibility />
         <Typography weight="bold" color={foo()}>
-          {label}
+          {label ? label : children}
         </Typography>
       </ButtonContent>
     </ElementButton>
