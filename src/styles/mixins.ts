@@ -19,8 +19,8 @@ export const FieldBases = ({ error }: FieldBasesProps) => css`
   color: ${colors.darkestGray};
 
   :disabled {
-    background: ${colors.ice};
-    color: ${colors.background};
+    background: ${colors.lightestGray};
+    color: ${colors.mediumGray};
   }
 `;
 
