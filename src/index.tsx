@@ -7,6 +7,8 @@ export { ButtonProps } from "./components/Button/types";
 export { Chips } from "./components/Chips";
 export { ChipsProps } from "./components/Chips/types";
 export { CircularProgress } from "./components/CircularProgress";
+export { Collapse } from './components/Collapse';
+export { CollapseProps } from './components/Collapse/types';
 export { Dialog } from "./components/Dialog";
 export { DialogProps } from "./components/Dialog/types";
 export * from "./components/Drawer";
@@ -19,5 +21,7 @@ export { Toolbar } from "./components/Toolbar";
 export { ToolbarProps } from "./components/Toolbar/types";
 export { Typography } from "./components/Typography";
 export { TypographyProps } from "./components/Typography/types";
+export { Tag } from "./components/Tag";
+export { TagProps } from "./components/Tag/types";
 
 export const ClioPatterns = { colors, sizes, weights };
