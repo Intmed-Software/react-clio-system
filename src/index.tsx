@@ -7,6 +7,8 @@ export { ButtonProps } from "./components/Button/types";
 export { Chips } from "./components/Chips";
 export { ChipsProps } from "./components/Chips/types";
 export { CircularProgress } from "./components/CircularProgress";
+export { Collapse } from './components/Collapse';
+export { CollapseProps } from './components/Collapse/types';
 export { Dialog } from "./components/Dialog";
 export { DialogProps } from "./components/Dialog/types";
 export * from "./components/Drawer";
