@@ -19,5 +19,7 @@ export { Toolbar } from "./components/Toolbar";
 export { ToolbarProps } from "./components/Toolbar/types";
 export { Typography } from "./components/Typography";
 export { TypographyProps } from "./components/Typography/types";
+export { Tag } from "./components/Tag";
+export { TagProps } from "./components/Tag/types";
 
 export const ClioPatterns = { colors, sizes, weights };
