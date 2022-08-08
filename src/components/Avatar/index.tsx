@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "../Typography";
 import { AvatarInitial, AvatarPhoto } from "./styled";
 import { AvatarProps } from "./types";
-import { initials } from "./utils";
+import { initials, parseFirstAndLastName } from "./utils";
 
 export function Avatar({
   size = "medium",
@@ -29,7 +29,7 @@ export function Avatar({
   ) : (
     <AvatarInitial {...avatarProperties}>
       <Typography weight="bold" size={setLabelSize()} color="white">
-        {initials(avatarProperties.label)}
+        {initials(parseFirstAndLastName(avatarProperties.label))}
       </Typography>
     </AvatarInitial>
   );
